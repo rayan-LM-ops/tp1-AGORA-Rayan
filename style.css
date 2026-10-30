@@ -67,7 +67,6 @@
   --cible-minimale: 44px; /* aucune cible tactile plus petite */
   --largeur-max: 1200px; /* largeur du contenu en desktop */
 }
-
 .header {
   display:flex;
   justify-content: space-between;
@@ -171,10 +170,7 @@ fieldset label {
 
 /*Carte des salles*/
 .carte_salle {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 340px;
+    max-width: none;
 }
 
 .carte_logo_salle-container {
@@ -200,12 +196,9 @@ fieldset label {
 }
 
 .salles-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--espace-4, 40px);
-    width: 100%;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .carte_salle {
@@ -238,7 +231,7 @@ fieldset label {
 .carte_icone {
   width: 48px;
   height: 48px;
-  filter: brightness(0) invert(1); /* icône blanche */
+  filter: brightness(0) invert(1);
 }
 
 .carte_titre {
@@ -268,7 +261,7 @@ fieldset label {
 }
 
 .carte_tags li {
-  background-color: #ebe9e2; /* beige de ta maquette */
+  background-color: var(--couleur-fond);
   border-radius: 8px;
   padding: 6px 12px;
   font-family: var(--police);
