@@ -67,3 +67,261 @@
   --cible-minimale: 44px; /* aucune cible tactile plus petite */
   --largeur-max: 1200px; /* largeur du contenu en desktop */
 }
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 25px;
+  background-color: var(--couleur-surface); 
+  border-bottom: 5px var(--couleur-bordure-champ);
+}
+
+.h2 {
+  font-family: var(--police);
+  color: var(--couleur-primaire);
+  font-weight: 600; 
+}
+
+.fond-mobile {
+  background-color: var(--couleur-fond);
+}
+
+
+.police-main {
+  font-family: var(--police);
+  font-size: 32px;
+  font-weight: 700; 
+  padding: 15px;
+}
+
+.police {
+  font-family: var(--police);
+  font-size: 15px;
+  font-weight: 600; 
+  padding: 15px;
+}
+/* carte pour les filtres*/
+
+.police-filtre {
+  font-family: var(--police);
+  color: var(--couleur-texte-attenue);
+  padding: 8px;
+}
+
+.titre-filtres {
+  font-family: var(--police);
+  color: var(--couleur-textex);
+  padding: 14px;
+}
+
+form {
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+
+form input[type="search"],
+form input[type="number"],
+form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+}
+
+
+form > label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: -8px;
+}
+
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--couleur-bordure-champ);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/*Carte des salles*/
+.carte_salle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+}
+
+.carte_logo_salle-container {
+    background-color: var(--couleur-focus);
+    width: 100%;
+    height: 165px;
+    border-radius: 16px 16px 0 0;
+}
+
+.carte_salle__corps {
+  background-color: var(--couleur-surface);
+  padding: var(--espace-4);
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carte_logo_salle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espace-4, 40px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carte_salle {
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+}
+
+.police-description {
+  font-family: var(--police);
+  font-size: 12px;
+  color: var(--couleur-texte-attenue);
+  padding: 8px;
+}
+
+.bouton {
+  display:flex;
+  align-items: center;
+  background-color: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure-champ);
+  border-radius: 10px;
+  font-family: var(--police);
+  font-size: 15px;
+  color: var(--couleur-primaire);
+  padding: 8px;
+}
+
+
+
+.carte_icone {
+  width: 48px;
+  height: 48px;
+  filter: brightness(0) invert(1); /* icône blanche */
+}
+
+.carte_titre {
+  margin: 0;
+  font-family: var(--police);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.carte_info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--police);
+  font-size: 16px;
+  color: var(--couleur-texte-attenue);
+}
+
+.carte_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carte_tags li {
+  background-color: #ebe9e2; /* beige de ta maquette */
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-family: var(--police);
+  font-size: 14px;
+}
+
+.carte_tarifs p {
+  margin: 0;
+  font-family: var(--police);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--couleur-texte-attenue);
+}
+
+.bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--couleur-surface);
+  border: 1px solid var(--couleur-primaire);
+  border-radius: 10px;
+  font-family: var(--police);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--couleur-primaire);
+  cursor: pointer;
+}
+
+/*le pied de la page*/
+.footer-police {
+  background-color: var(--couleur-surface);
+  font-family: var(--police);
+  font-size: 14px;
+  font-weight: 550; 
+  padding: 12px;
+}
+
+.footer-police-2 {
+  background-color: var(--couleur-surface);
+  font-family: var(--police);
+  color: var(--couleur-texte-attenue);
+  font-size: 14px;
+  padding: 12px;
+}
+
+.footer-police-3 {
+  display: flex;
+  justify-content: center;
+  background-color: var(--couleur-surface);
+  font-family: var(--police);
+  color: var(--couleur-focus);
+  font-size: 14px;
+  padding: 12px;
+}

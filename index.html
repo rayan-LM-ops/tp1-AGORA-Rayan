@@ -17,21 +17,151 @@
     <link rel="stylesheet" href="/style.css" />
     <script type="module" src="/main.js"></script>
   </head>
-  <body>
-    <!--
-      Écran à intégrer : le catalogue des salles d'Agora.
-      Maquettes : maquettes/Catalogue-mobile.png et maquettes/Catalogue-desktop.png.
-      Valeurs (couleurs, tailles, espacements, états) : maquettes/Composants.png.
+  <body class="fond-mobile">
+     <header class="header">
+        <button><img src="public/icones/menu.svg"></button>
+        
+        <div class="h2">
+            <img src="/public/icones/batiment.svg" alt="" class="logo-svg">
+            Agora
+        </div>
+        <button><img src="public/icones/utilisateur.svg"></button>
+    </header>
 
-      De haut en bas, la maquette montre :
-        - l'en-tête (logo, navigation, connexion),
-        - le titre de la page,
-        - le panneau de filtres,
-        - le nombre de salles,
-        - la liste des cartes de salles,
-        - le pied de page.
+    <main class="police-main">Trouver une salle</main>
+    <form>
+      <div class="police-filtre"><img src="public/icones/filtre.svg"> FILTRES</div>
+        <input class="police-filtre" img src="public/icones/recherche.svg" type="search" id="recherche" name="recherche" placeholder="Rechercher une salle">
 
-      Les icônes de la maquette sont dans public/icones/ (SVG, trait de 2 px).
-    -->
+        <label class="titre-filtres" for="quartier">Quartier</label>
+        <select class="titre-filtres" id="quartier" name="quartier">
+        <option  value="">Tous les quartiers</option>
+        
+      </select>
+      <label class="titre-filtres" for="capacite">Capacité minimale</label>
+      <input class="titre-filtres" type="number" id="capacite" name="capacite" placeholder="Ex. 50" min="0">
+      
+        <fieldset>
+          <legend class="titre-filtres">Équipements</legend>
+          <label class="titre-filtres"><input type="checkbox" name="equipements" value="pmr"> PMR</label>
+          <label class="titre-filtres"><input type="checkbox" name="equipements" value="cuisine"> Cuisine</label>
+          <label class="titre-filtres"><input type="checkbox" name="equipements" value="videoprojecteur"> Vidéoprojecteur</label>
+          <label class="titre-filtres"><input type="checkbox" name="equipements" value="scene"> Scène</label>
+          <label class="titre-filtres"><input type="checkbox" name="equipements" value="parking"> Parking</label>
+        </fieldset>
+    </form>
+
+    <div class="police">12 salles</div>
+
+    <div class="salles-contaier">
+
+      <article class="carte_salle">
+        <div class="carte_logo_salle-container">
+          <img src="public/icones/batiment.svg" alt="" class="carte_icone">
+        </div>
+
+        <div class="carte_salle__corps">
+          <h2 class="carte_titre">Salle des fêtes Jean-Moulin</h2>
+
+          <p class="carte_info"><img src="public/icones/lieu.svg" alt="">Centre-ville</p>
+          <p class="carte_info"><img src="public/icones/personnes.svg" alt="">400 personnes</p>
+
+          <ul class="carte_tags">
+            <li>Scène</li>
+            <li>Vidéoprojecteur</li>
+            <li>Cuisine</li>
+          </ul>
+
+          <div class="carte_tarifs">
+            <p>Gratuit pour les associations de Montvert</p>
+            <p>60 €/h hors Montvert</p>
+          </div>
+
+          <button class="bouton">Voir la salle</button>
+        </div>
+      </article>
+
+      <article class="carte_salle">
+        <div class="carte_logo_salle-container">
+          <img src="public/icones/batiment.svg" alt="" class="carte_icone">
+        </div>
+
+        <div class="carte_salle__corps">
+          <h2 class="carte_titre">Maison des associations, salle A</h2>
+
+          <p class="carte_info"><img src="public/icones/lieu.svg" alt="">Centre-ville</p>
+          <p class="carte_info"><img src="public/icones/personnes.svg" alt="">40 personnes</p>
+
+          <ul class="carte_tags">
+            <li>Vidéoprojecteur</li>
+            <li>Wifi</li>
+            <li>PMR</li>
+          </ul>
+
+          <div class="carte_tarifs">
+            <p>Gratuit pour les associations de Montvert</p>
+            <p>15 €/h hors Montvert</p>
+          </div>
+
+          <button class="bouton">Voir la salle</button>
+        </div>
+      </article>
+
+      <article class="carte_salle">
+        <div class="carte_logo_salle-container">
+          <img src="public/icones/batiment.svg" alt="" class="carte_icone">
+        </div>
+
+        <div class="carte_salle__corps">
+          <h2 class="carte_titre">Maison des associations, salle B</h2>
+
+          <p class="carte_info"><img src="public/icones/lieu.svg" alt="">Centre-ville</p>
+          <p class="carte_info"><img src="public/icones/personnes.svg" alt="">20 personnes</p>
+
+          <ul class="carte_tags">
+            <li>Wifi</li>
+            <li>PMR</li>
+          </ul>
+
+          <div class="carte_tarifs">
+            <p>Gratuit pour les associations de Montvert</p>
+            <p>15 €/h hors Montvert</p>
+          </div>
+
+          <button class="bouton">Voir la salle</button>
+        </div>
+      </article>
+
+      <article class="carte_salle">
+        <div class="carte_logo_salle-container">
+          <img src="public/icones/batiment.svg" alt="" class="carte_icone">
+        </div>
+
+        <div class="carte_salle__corps">
+          <h2 class="carte_titre">Gymnase des Tilleuls, salle polyvalente</h2>
+
+          <p class="carte_info"><img src="public/icones/lieu.svg" alt="">Les Tilleuls</p>
+          <p class="carte_info"><img src="public/icones/personnes.svg" alt="">150 personnes</p>
+
+          <ul class="carte_tags">
+            <li>Sonorisation</li>
+            <li>PMR</li>
+            <li>Parking</li>
+          </ul>
+
+          <div class="carte_tarifs">
+            <p>Gratuit pour les associations de Montvert</p>
+            <p>30 €/h hors Montvert</p>
+          </div>
+
+          <button class="bouton">Voir la salle</button>
+        </div>
+      </article>
+    </div>
+   
+
+    <footer class="footer-police">Agora – Les salles municipales de Montvert</footer>
+    <footer class="footer-police-2">Ville de Montvert – Service Vie associative 02 43 00 00 00</footer>
+    <footer class="footer-police-3"> Accessbilité Mention légales</footer>
   </body>
 </html>
